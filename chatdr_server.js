@@ -8,7 +8,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 const openai = new OpenAI({
-  apiKey: "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",
+  apiKey: process.env.OPENAI_API_KEY,
 });
 
 app.post('/chat', async (req, res) => {
