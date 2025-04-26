@@ -7,6 +7,9 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
+
+console.log("✅ API Key 확인:", process.env.OPENAI_API_KEY);
+
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
